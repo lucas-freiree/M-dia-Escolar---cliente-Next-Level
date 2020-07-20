@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Média Alunos</title>
+</head>
+<body>
+<script type="text/javascript">
+nome=prompt("Digite o nome do aluno:");
+nota1=prompt("Digite a nota da prova:");
+nota1= eval (nota1);
+nota2=prompt("Digite a nota do projeto:");
+nota2= eval(nota2);
+nota3=prompt("Digite a nota da lista de exercícios:");
+nota3= eval(nota3);
+nota4=prompt("Digite a nota dos projetos de software livre e conclusão de MOOCs:");
+nota4=eval(nota4); 
+media = ((nota1*3) + (nota2*3) + (nota3*2) + (nota4*3))/(3+3+2+3);
+media = parseFloat (media.toFixed(2));
+
+if (media>=8)
+{
+document.write ("Aluno Aprovado!")
+document.write ("<br>")
+document.write ("Olá,"+nome+ ". Sua média foi: "+media)
+}
+else {
+document.write ("Aluno Reprovado!")
+document.write ("<br>")
+document.write ("Infelizmente,"+nome+ ". Sua média foi de: "+media)
+document.write ("<br>")
+document.write("Você precisa tirar o equivalente de: "+(10-media)+ " na prova final")
+}
+</script>
+</body>
+</html>
